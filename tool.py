@@ -18,23 +18,27 @@ def gen_pages():
 
     global pages
 
-    pages = '''pages: \n  - [index.md, 首页]\n'''
+    fmt = "- [%32s, %16s]"
+
+    pages = "pages: \n  " + fmt + "\n" 
+    pages = pages % ("index.md", "首页")
 
     dirs = {
-        r"./articles/":"文章",
-        r"./notes/":"笔记",
-        r"./translate/":"翻译",
-    }
+        r"./articles/":    "文章",
+        r"./notes/":       "笔记",
+        r"./translate/":   "翻译"
+    } 
 
-    pages_fmt = "  - [%s, %s]\n"
+    pages_fmt = "  " + fmt + "\n"
 
-    for path in dirs:
+    for path in sorted(dirs):
         for md in glob(path + "/*.md"):
             md = md.replace("\\", "/")
             if path in md:
                 pages = pages + pages_fmt % (md, dirs[path])
 
-    pages = pages + "  - [about.md, 关于]\n"
+    pages = pages + "  " + fmt + "\n" 
+    pages = pages % ("about.md", "关于")
 
 
 

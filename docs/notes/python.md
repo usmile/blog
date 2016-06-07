@@ -1,3 +1,72 @@
+# 基础语法
+# python库
+## 字符串操作库
+### re: 正则表达式
+
+## 文件操作
+### glob: 查找文件
+- `glob.glob("/usr/lib/*.so")`: 查找所有的/usr/lib路径下的所有以.so结尾的文件
+
+### os.path: 路径操作
+- `os.path.abspath("./")`: 获取绝对路径 /root/github/blog
+- `os.path.basename("./readme.md")`: 获得文件名 readme.md
+- `os.path.exists(path)`: 判断是否文件或路径是否存在
+- `os.path.dirname("/root/readme.md")`: 获取路径名 /root
+- `os.path.splitext("/root/readme.md")`: 获得('/root/readme', '.md')格式
+
+### codecs: 编码
+- `codecs.open(file, "r", "utf-8") `: 以utf-8格式打开文件
+
+### 遍历所有目录/文件
+自己写了两个小函数 [`os_walk.py`](https://github.com/usmile/programs/blob/master/os_walk.py)。
+
+- `file_list(path, [".py", ".c"])`
+- `dir_list(path)`
+
+```python
+# 遍历目录下的所有文件
+for path in file_list(path):
+    print(path)
+
+# 遍历目录下的所有目录
+for path in dir_list(path):
+    print(path)
+```
+
+## 网络
+### web框架
+- tornado: 是一个使用`epoll`多路复用web框架，由facebook开发，知乎使用该框架做基础。
+- django: 是一个大而全的开箱即用的库。
+- flask: 是一个微框架，提供了核心，然后可以极大扩展。
+- web.py: 轻量级的框架。
+
+## 其它
+### logging: 日志打印
+```python
+import logging
+
+# 打印级别为INFO
+logging.basicConfig(level=logging.INFO)
+
+# 打印日志
+logging.error("msg")
+logging.warn("msg")
+```
+
+### PIL: 图像处理标准库
+- `pip install pillow`: python3下安装方法
+- 缩放图像
+```python
+from PIL import Image
+
+im = Image.open('image.jpg')
+w, h = im.size
+
+im.thumbnail((w//2, h//2))  # 缩放到50%
+im.save('image.jpg', 'jpeg')
+```
+
+
 # 错误、调试和测试
 在程序运行过程中，总会遇到各种各样的错误。有的错误是程序编写有问题造成的，比如本来应该输出整数结果输出了字符串，这种错误我们通常称之为bug，bug是必须修复的。有的错误是用户输入造成的，比如让用户输入email地址，结果得到一个空字符串，这种错误可以通过检查用户输入来做相应的处理。还有一类错误是完全无法在程序运行过程中预测的，比如写入文件的时候，磁盘满了，写不进去了，或者从网络抓取数据，网络突然断掉了。这类错误也称为异常，在程序中通常是必须处理的，否则，程序会因为各种问题终止并退出。Python内置了一套异常处理机制，来帮助我们进行错误处理。此外，我们也需要跟踪程序的执行，查看变量的值是否正确，这个过程称为调试。Python的pdb可以让我们以单步方式执行代码。最后，编写测试也很重要。有了良好的测试，就可以在程序修改后反复运行，确保程序输出符合我们编写的测试。
 

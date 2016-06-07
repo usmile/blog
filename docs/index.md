@@ -1,12 +1,16 @@
-## 文章 
+## 文章
 
-> `git command:` git 学习笔记
+> [redis](notes/git_commands.md)
 
-> `python notes:` python学习笔记
+## 笔记 
+
+> [git 学习笔记](notes/git_commands.md)
+
+> [python学习笔记](notes/python_notes.md)
 
 ## 翻译 
 
-> `datastore:` a 500lines' article 
+> [datastore a 500lines' article](translate/datastore.md)
 
-> `zookeeper:` zookeeper论文翻译
+> [互联网系统无等待协调服务zookeeper](translate/zookeeper_paper.md)
 

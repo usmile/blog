@@ -1,6 +1,6 @@
 # 第一章 入门介绍
 
-> git 命令 [commands](./res/github-git-cheat-sheet.pdf)
+> [git cheat sheet(pdf)](./res/github-git-cheat-sheet.pdf)
 
 ## 1.1 基本命令
 ```bash
