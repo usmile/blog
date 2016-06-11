@@ -8,11 +8,13 @@
 mkdocs new blog 
 
 # 修改mkdocs.yml
+python tool.py 
 
 # 启动服务
 mkdocs serve
 
 # 生成站点
 mkdocs build
+
 ```
 
