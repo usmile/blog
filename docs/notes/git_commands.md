@@ -1,4 +1,7 @@
 # 第一章 入门介绍
+
+> git 命令 [commands](./res/github-git-cheat-sheet.pdf)
+
 ## 1.1 基本命令
 ```bash
 mkdir notes
@@ -48,25 +51,6 @@ git checkout -- readme.md
 
 # 撤销暂存区
 git reset HEAD readme.md
-```
-
-## 1.3 流程图
-```
-       +---------- pull(fetch+merge) ----------+
-       |                                       |
-       |                                       +
-  +--------+         +--------+            +---------+
-  |        |--clone-+|        |            |         |
-  | remote |         |  repo  |--checkout-+|workspace|
-  |        |+--push--|        |            |         |
-  +--------+         +--------+            +---------+
-                         +                     |
-                         |                     |
-                       commit                 add 
-                         |       +-------+     |
-                         |       | index |     |
-                         +-------| stage |+----+
-                                 +-------+
 ```
 
 # 第二章 远程仓库

@@ -6,7 +6,6 @@ markdown_extensions: [toc, tables]
 pages: 
   - [index.md, 首页]
   - [./notes/git_commands.md, 笔记]
-  - [./notes/mkdocs_usage.md, 笔记]
   - [./notes/python_notes.md, 笔记]
   - [./notes/readme.md, 笔记]
   - [./notes/vm_network.md, 笔记]
