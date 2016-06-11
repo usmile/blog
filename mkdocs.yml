@@ -1,0 +1,12 @@
+site_name: github blog
+site_dir: ../usmile.github.com/
+theme: bootstrap
+markdown_extensions:
+  - toc
+pages:
+  - [index.md, 首页]
+  - [notes/git_commands.md, 笔记]
+  - [notes/python_notes.md, 笔记]
+  - [translate/datastore_cn.md, 翻译]
+  - [translate/互联网系统无等待协调服务zookeeper.md, 翻译]
+  - [about.md, 关于]
