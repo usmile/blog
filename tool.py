@@ -31,7 +31,7 @@ def gen_pages():
 
     pages_fmt = "  " + fmt + "\n"
 
-    for path in dirs:
+    for path in sorted(dirs):
         for md in glob(path + "/*.md"):
             md = md.replace("\\", "/")
             if path in md:
