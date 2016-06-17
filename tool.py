@@ -24,10 +24,10 @@ def gen_pages():
     pages = pages % ("index.md", "首页")
 
     dirs = {
-        r"./articles/":"文章",
-        r"./notes/":"笔记",
-        r"./translate/":"翻译",
-    }
+        r"./articles/":    "文章",
+        r"./notes/":       "笔记",
+        r"./translate/":   "翻译"
+    } 
 
     pages_fmt = "  " + fmt + "\n"
 
