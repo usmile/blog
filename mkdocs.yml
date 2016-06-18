@@ -1,15 +1,17 @@
-site_name: github blog
+# 这个文件由 tool.py 自动生成，不要手动修改
+site_name: 博客 
 site_dir: ../usmile.github.com/
 theme: bootstrap
 docs_dir: docs
 markdown_extensions: [toc, tables]
 pages: 
   - [                        index.md,               首页]
+  - [            ./articles/readme.md,               文章]
+  - [                ./life/readme.md,               生活]
   - [                 ./notes/bash.md,               笔记]
   - [                  ./notes/git.md,               笔记]
   - [               ./notes/python.md,               笔记]
-  - [               ./notes/readme.md,               笔记]
   - [               ./notes/vmware.md,               笔记]
   - [        ./translate/datastore.md,               翻译]
-  - [  ./translate/zookeeper_paper.md,               翻译]
+  - [        ./translate/zookeeper.md,               翻译]
   - [                        about.md,               关于]

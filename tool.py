@@ -5,7 +5,8 @@ from os import chdir
 # generate mkdocs.yml
 
 mkdocs = '''\
-site_name: github blog
+# 这个文件由 tool.py 自动生成，不要手动修改
+site_name: 博客 
 site_dir: ../usmile.github.com/
 theme: bootstrap
 docs_dir: docs
@@ -20,13 +21,15 @@ def gen_pages():
 
     fmt = "- [%32s, %16s]"
 
-    pages = "pages: \n  " + fmt + "\n" 
+    pages = "pages: \n  " + fmt + "\n"
+
     pages = pages % ("index.md", "首页")
 
     dirs = {
         r"./articles/":    "文章",
         r"./notes/":       "笔记",
-        r"./translate/":   "翻译"
+        r"./translate/":   "翻译",
+        r"./life/":        "生活"
     } 
 
     pages_fmt = "  " + fmt + "\n"
