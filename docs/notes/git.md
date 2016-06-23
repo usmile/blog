@@ -191,3 +191,33 @@ git add readme.md
 git command "my first server sample"
 git push
 ```
+
+# 第五章 配置git
+
+## hooks
+
+git hook分为两种：客户端hook和服务器端hook。
+
+1. 例子：检测服务器端代码的更新后输出一条信息"repo is been updated"。
+
+(server)
+`cd .git/hooks/`
+
+重命名 post-update.sample 为 post-update
+
+在 post-update 中写入如下内容
+`echo "repo is been updated"`
+
+(client)
+`echo "new line" >> readme.md`
+`git commit -m -a "update readme"; git push`
+
+```
+(output)
+...
+Total 3 (delta 2), reused 0 (delta 0)
+remote: ===============================
+remote: git repo is been updated
+remote: ===============================
+...
+```
