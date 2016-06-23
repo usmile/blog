@@ -221,3 +221,10 @@ remote: git repo is been updated
 remote: ===============================
 ...
 ```
+
+
+
+# 参考书
+
+1. [pro git 中文版](http://git.oschina.net/progit/index.html)
+
